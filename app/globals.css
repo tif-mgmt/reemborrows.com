@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F4EDE2;
+  color: #23262B;
+}
+
+::selection {
+  background-color: #DAB1AD;
+  color: #23262B;
+}
+
+.eyebrow {
+  @apply text-xs tracking-widest2 uppercase text-rosedeep font-semibold;
+}
+
+.section-pad {
+  @apply px-6 md:px-12 lg:px-20;
+}
+
+.hairline {
+  @apply border-t border-ink/10;
+}
+
+.btn-primary {
+  @apply inline-block bg-ocean text-white px-7 py-3.5 text-xs tracking-widest2 uppercase hover:bg-oceandark transition-colors;
+}
+
+.btn-rose {
+  @apply inline-block bg-rose text-oceandark px-7 py-3.5 text-xs tracking-widest2 uppercase hover:bg-rosedeep hover:text-white transition-colors;
+}
+
+.btn-outline {
+  @apply inline-block border border-ocean text-ocean px-7 py-3.5 text-xs tracking-widest2 uppercase hover:bg-ocean hover:text-white transition-colors;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
